@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon" href="{{ url_for('static', filename='logo.ico') }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='home.css') }}"
+    />
+    <link rel="icon" href="{{ url_for('static', filename='logo.ico') }}" />
     <title>Welcome to propoint documentation</title>
-</head>
-<body>
-    <h1>Welcome to propoint documentation</h1>
-</body>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <span id="nav-title">Propoint documentation</span>
+      </nav>
+    </header>
+    <div id="hero-section">
+      <div class="hero-left-side-section">
+        <h1>Welcome to propoint documentation</h1>
+        <p>
+          Propoint is a desktop app to automate boring spreasheets and save your
+          tons of time.
+        </p>
+        <a href="#">Get Started</a>
+      </div>
+      <div class="hero-right-side-section">
+        <img
+          src="{{ url_for('static', filename='hero.png') }}"
+          alt="hero-img"
+        />
+      </div>
+    </div>
+  </body>
 </html>
