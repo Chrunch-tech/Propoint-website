@@ -12,11 +12,13 @@ nav {
 }
 
 #nav-title {
+  position: absolute;
   color: white;
   font-size: 25px;
   font-weight: 100%;
   margin-left: 20px;
   font-family: "Heebo", sans-serif;
+  z-index: 1;
 }
 
 #hero-section {
@@ -31,10 +33,12 @@ nav {
 }
 
 .hero-left-side-section > h1 {
-  color: #9962d1;
+  position: relative;
+  color: white;
   width: 664px;
   font-size: 50px;
   font-weight: bold;
+  z-index: 1;
 }
 
 .hero-right-side-section > img {
@@ -44,20 +48,74 @@ nav {
 }
 
 .hero-left-side-section > p {
+  position: relative;
   font-size: 25px;
   width: 490px;
   margin-top: 62px;
   margin-bottom: 60px;
+  z-index: 1;
 }
 
 .hero-left-side-section > a {
+  position: absolute;
   text-decoration: none;
   color: white;
-  background-color: #9962d1;
+  background-color: #3f3d56;
   padding-left: 26px;
   padding-top: 16px;
   padding-right: 26px;
   padding-bottom: 16px;
   border-radius: 20px;
   font-size: 15px;
+  z-index: 1;
+}
+
+.hero-left-side-section > a.btn {
+  transition: 0.5s;
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  background-color: #3f3d56;
+  padding-left: 26px;
+  padding-top: 16px;
+  padding-right: 26px;
+  padding-bottom: 16px;
+  border-radius: 20px;
+  font-size: 15px;
+  z-index: 1;
+}
+
+.hero-left-side-section > a.btn-hover-active {
+  transition: 0.5s;
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  background-color: #181820;
+  box-shadow: 0px 6px 20px 0px rgb(255, 255, 255);
+  padding-left: 26px;
+  padding-top: 16px;
+  padding-right: 26px;
+  padding-bottom: 16px;
+  border-radius: 20px;
+  font-size: 15px;
+  z-index: 1;
+}
+
+.middle-background {
+  background-color: #9962d1;
+  height: 500px;
+}
+
+.corner-circle {
+  position: absolute;
+  z-index: 0;
+  background-color: #9962d1;
+  top: -80px;
+  left: -80px;
+  right: -80px;
+  bottom: -80px;
+  width: 700px;
+  height: 700px;
+  transform: translate(x, y);
+  border-radius: 50%;
 }

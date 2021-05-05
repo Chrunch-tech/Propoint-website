@@ -28,6 +28,7 @@
       </nav>
     </header>
     <main>
+      <div class="corner-circle"></div>
       <section id="hero-section">
         <div class="hero-left-side-section">
           <h1>Welcome to propoint documentation</h1>
@@ -35,7 +36,7 @@
             Propoint is a desktop app to automate boring spreasheets and save
             your tons of time.
           </p>
-          <a href="#">Get Started</a>
+          <a href="#" id="get_started" class="btn">Get Started</a>
         </div>
         <div class="hero-right-side-section">
           <img
@@ -44,6 +45,18 @@
           />
         </div>
       </section>
+      <section id="middle-section">
+        <div class="middle-background"></div>
+      </section>
     </main>
+    <script>
+      const get_started = document.getElementById("get_started");
+      get_started.addEventListener("mouseover", () => {
+        get_started.className = "btn-hover-active";
+      });
+      get_started.addEventListener("mouseout", () => {
+        get_started.className = "btn";
+      });
+    </script>
   </body>
 </html>
