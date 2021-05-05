@@ -27,21 +27,23 @@
         <span id="nav-title">Propoint documentation</span>
       </nav>
     </header>
-    <div id="hero-section">
-      <div class="hero-left-side-section">
-        <h1>Welcome to propoint documentation</h1>
-        <p>
-          Propoint is a desktop app to automate boring spreasheets and save your
-          tons of time.
-        </p>
-        <a href="#">Get Started</a>
-      </div>
-      <div class="hero-right-side-section">
-        <img
-          src="{{ url_for('static', filename='hero.png') }}"
-          alt="hero-img"
-        />
-      </div>
-    </div>
+    <main>
+      <section id="hero-section">
+        <div class="hero-left-side-section">
+          <h1>Welcome to propoint documentation</h1>
+          <p>
+            Propoint is a desktop app to automate boring spreasheets and save
+            your tons of time.
+          </p>
+          <a href="#">Get Started</a>
+        </div>
+        <div class="hero-right-side-section">
+          <img
+            src="{{ url_for('static', filename='hero.svg') }}"
+            alt="hero-img"
+          />
+        </div>
+      </section>
+    </main>
   </body>
 </html>
