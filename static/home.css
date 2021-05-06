@@ -11,6 +11,7 @@ nav {
   padding: 25px;
   border-bottom-left-radius: 2%;
   border-bottom-right-radius: 2%;
+  overflow: hidden;
 }
 
 #nav-title {
@@ -133,6 +134,7 @@ nav {
     rgba(125, 0, 250, 0.63);
   justify-content: space-between;
   padding-top: 50px;
+  overflow: hidden;
 }
 
 #middle-section > img {
@@ -184,4 +186,48 @@ nav {
 
 .para-heading::after {
   content: "🤯";
+}
+
+#final-section {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 20px;
+}
+
+.card {
+  width: 403px;
+  height: 497px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.521);
+  border-radius: 50px;
+  transition: transform 0.2s;
+}
+
+.card-content > img {
+  width: 403px;
+  height: 295px;
+  background-size: cover;
+  border-radius: 50px;
+}
+
+.card-content > .card-text > h3 {
+  font-size: 30px;
+  font-weight: middle;
+  font-family: "Heebo", sans-serif;
+  width: 338px;
+}
+
+.card-text {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.card:hover {
+  transform: scale(1.06);
 }
