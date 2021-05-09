@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='documentation.css') }}"
+    />
+    <link rel="icon" href="{{ url_for('static', filename='logo.ico') }}" />
+    <title>Propoint documentation</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <span id="nav-title">Propoint documentation</span>
+      </nav>
+    </header>
+    <main>
+      <section id="hero-section">
+        <div class="background">
+          <img
+            src="{{ url_for('static', filename='documentation.svg') }}"
+            alt="documents-img"
+          />
+        </div>
+      </section>
+      <div class="spacing"></div>
+      <section id="accordian-section">
+        <div class="accrodian-block">
+          <div class="accordian">
+            <div class="accordian-base">
+              <div class="accordian-base-content">
+                <span class="accordian-title">Overview</span>
+                <img
+                  src="{{ url_for('static', filename='expand_more.svg') }}"
+                  alt="expand-more"
+                  class="expand-pointer-down"
+                />
+              </div>
+            </div>
+            <div class="accordian-content"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
