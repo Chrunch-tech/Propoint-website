@@ -126,10 +126,6 @@ nav {
   width: 950px;
 }
 
-footer {
-  margin-top: 200px;
-}
-
 .footer-content {
   display: flex;
   flex-direction: column;
@@ -141,7 +137,7 @@ footer {
 
 .footer-content > img {
   position: absolute;
-  top: 700px;
+  top: 930px;
   border-radius: 50%;
 }
 
