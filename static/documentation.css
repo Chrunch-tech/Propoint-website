@@ -57,22 +57,18 @@ nav {
   top: -10%;
 }
 
-/* #accordian-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-} */
-
-.accordian {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.accordian-item {
+  border: 1px solid lightgrey;
+  padding: 10px 0px;
+  border-radius: 5px;
+  width: 1000px;
 }
 
-.accordian-block {
-  width: 1063px;
+#accordian {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .spacing {
@@ -80,19 +76,46 @@ nav {
   height: 200px;
 }
 
-.accordian-base {
-  border-color: black;
-}
-.accordian-base-content {
+.accordian-head {
   display: grid;
-  grid-template-columns: 500px 100px;
-  margin-left: 100px;
+  grid-template-columns: 900px 50px;
+  padding-left: 40px;
+}
+
+.accordian-head {
+  cursor: pointer;
 }
 
 .accordian-title {
-  font-size: 20px;
+  font-size: 18px;
 }
 
-.expand-pointer-down {
-  cursor: pointer;
+.accordian-body {
+  display: none;
+  padding-left: 40px;
+  margin-top: 10px;
+  width: 950px;
+}
+
+.accordian-collapse {
+  transition: transform 0.5s ease;
+}
+
+.accordian-expand {
+  transition: transform 0.5s ease;
+  transform: rotate(-180deg);
+}
+
+.accordian-body-show {
+  padding-left: 40px;
+  margin-top: 10px;
+  width: 950px;
+}
+
+.accordian-body-sliding {
+  height: 0px;
+  overflow: hidden;
+  padding-left: 40px;
+  margin-top: 10px;
+  width: 950px;
 }

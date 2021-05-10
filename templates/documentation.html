@@ -38,22 +38,64 @@
       </section>
       <div class="spacing"></div>
       <section id="accordian-section">
-        <div class="accrodian-block">
-          <div class="accordian">
-            <div class="accordian-base">
-              <div class="accordian-base-content">
-                <span class="accordian-title">Overview</span>
-                <img
-                  src="{{ url_for('static', filename='expand_more.svg') }}"
-                  alt="expand-more"
-                  class="expand-pointer-down"
-                />
-              </div>
+        <div id="accordian">
+          <div class="accordian-item">
+            <div class="accordian-head">
+              <span class="accordian-title">Overview</span>
+              <img
+                src="{{ url_for('static', filename='expand_more.svg') }}"
+                alt="expansion"
+                class="accordian-collapse"
+              />
             </div>
-            <div class="accordian-content"></div>
+            <div class="accordian-body">
+              <h1>Overview</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+                cupiditate ipsa tempore velit veritatis expedita corporis
+                laborum molestias. Provident voluptate quasi, voluptates iure
+                eos, aut in dolores nemo ut possimus ipsam soluta nostrum
+                deleniti commodi eligendi similique. Molestias, impedit ab
+                nostrum asperiores maxime qui ad modi tenetur explicabo? Magni
+                ut iure corporis provident nesciunt eaque vero officia nulla non
+                tempora, quae neque, perferendis nam optio deleniti? Pariatur
+                cupiditate adipisci ab corrupti quod perspiciatis sed quia ea
+                recusandae iste minima tenetur vel architecto et cum, debitis
+                temporibus hic nulla nisi? Error sed pariatur nam aliquam
+                dolores nostrum dignissimos quibusdam aliquid ullam.
+              </p>
+            </div>
+          </div>
+          <div class="accordian-item">
+            <div class="accordian-head">
+              <span class="accordian-title">Testing</span>
+              <img
+                src="{{ url_for('static', filename='expand_more.svg') }}"
+                alt="expansion"
+                class="accordian-collapse"
+              />
+            </div>
+            <div class="accordian-body">
+              <h1>Testing</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+                cupiditate ipsa tempore velit veritatis expedita corporis
+                laborum molestias. Provident voluptate quasi, voluptates iure
+                eos, aut in dolores nemo ut possimus ipsam soluta nostrum
+                deleniti commodi eligendi similique. Molestias, impedit ab
+                nostrum asperiores maxime qui ad modi tenetur explicabo? Magni
+                ut iure corporis provident nesciunt eaque vero officia nulla non
+                tempora, quae neque, perferendis nam optio deleniti? Pariatur
+                cupiditate adipisci ab corrupti quod perspiciatis sed quia ea
+                recusandae iste minima tenetur vel architecto et cum, debitis
+                temporibus hic nulla nisi? Error sed pariatur nam aliquam
+                dolores nostrum dignissimos quibusdam aliquid ullam.
+              </p>
+            </div>
           </div>
         </div>
       </section>
     </main>
+    <script src="{{ url_for('static', filename='documentation.js') }}"></script>
   </body>
 </html>
