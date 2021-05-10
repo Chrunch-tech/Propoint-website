@@ -44,7 +44,7 @@ class ProcessAccordian {
     const total_height = 0;
     this.accordian_body.className = "accordian-body-sliding";
     const accordian_body = this.accordian_body;
-    const interval_id = setInterval(sliding, 10);
+    const interval_id = setInterval(sliding, 0.1);
     let current_height = this.accordian_body.clientHeight;
     function sliding() {
       if (current_height === total_height) {
