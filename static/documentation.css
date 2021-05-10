@@ -102,11 +102,11 @@ nav {
 }
 
 .accordian-collapse {
-  transition: transform 0.5s ease;
+  transition: transform 1s ease;
 }
 
 .accordian-expand {
-  transition: transform 0.5s ease;
+  transition: transform 1s ease;
   transform: rotate(-180deg);
 }
 
@@ -150,4 +150,13 @@ footer {
   color: rgba(248, 248, 255, 0.897);
   font-size: 20px;
   font-weight: middle;
+}
+
+span.app-name {
+  font-style: italic;
+  font-weight: middle;
+}
+
+span.command_palette_example {
+  background-color: lightgrey;
 }

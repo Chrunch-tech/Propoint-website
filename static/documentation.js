@@ -22,7 +22,7 @@ class ProcessAccordian {
     const total_height = this.accordian_body.clientHeight;
     this.accordian_body.className = "accordian-body-sliding";
     const accordian_body = this.accordian_body;
-    const interval_id = setInterval(sliding, 0.0002);
+    const interval_id = setInterval(sliding, 0.2);
     let current_height = 0;
     function sliding() {
       if (current_height === total_height) {
@@ -44,7 +44,7 @@ class ProcessAccordian {
     const total_height = 0;
     this.accordian_body.className = "accordian-body-sliding";
     const accordian_body = this.accordian_body;
-    const interval_id = setInterval(sliding, 0.0002);
+    const interval_id = setInterval(sliding, 0.2);
     let current_height = this.accordian_body.clientHeight;
     function sliding() {
       if (current_height === total_height) {
@@ -63,7 +63,8 @@ class ProcessAccordian {
 }
 
 for (const accordian_item of accordian_items) {
-  accordian_item.addEventListener("click", () => {
+  const accordian_head = accordian_item.children[0];
+  accordian_head.addEventListener("click", () => {
     const processAccordian = new ProcessAccordian(accordian_item);
     processAccordian.process();
   });

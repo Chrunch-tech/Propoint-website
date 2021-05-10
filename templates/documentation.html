@@ -49,26 +49,38 @@
               />
             </div>
             <div class="accordian-body">
-              <h1>Overview</h1>
+              <h2>Overview</h2>
+              <hr />
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                cupiditate ipsa tempore velit veritatis expedita corporis
-                laborum molestias. Provident voluptate quasi, voluptates iure
-                eos, aut in dolores nemo ut possimus ipsam soluta nostrum
-                deleniti commodi eligendi similique. Molestias, impedit ab
-                nostrum asperiores maxime qui ad modi tenetur explicabo? Magni
-                ut iure corporis provident nesciunt eaque vero officia nulla non
-                tempora, quae neque, perferendis nam optio deleniti? Pariatur
-                cupiditate adipisci ab corrupti quod perspiciatis sed quia ea
-                recusandae iste minima tenetur vel architecto et cum, debitis
-                temporibus hic nulla nisi? Error sed pariatur nam aliquam
-                dolores nostrum dignissimos quibusdam aliquid ullam.
+                This documentation will give you all information about
+                <span class="app-name">Propoint</span> app and how to use it.
               </p>
+              <br />
+              <h3>What is Propoint?</h3>
+              <p>
+                <span class="app-name">Propoint</span> is decktop app that use
+                automate boring spreadsheets.
+              </p>
+              <br />
+              <h3>What can you do with?</h3>
+              <p>
+                You can apply arithmetic operation or mathamatical operation on
+                your spreadsheet using a special tool caller command palette
+                <i>(View the command palette section to know command palette)</i
+                >. You can sort, reverce sort and delete any column you want.
+              </p>
+              <br />
+              <strong>
+                <i>
+                  Note: Current version of propoint dose not support any
+                  operation on rows
+                </i>
+              </strong>
             </div>
           </div>
           <div class="accordian-item">
             <div class="accordian-head">
-              <span class="accordian-title">Testing</span>
+              <span class="accordian-title">Command palette</span>
               <img
                 src="{{ url_for('static', filename='expand_more.svg') }}"
                 alt="expansion"
@@ -76,20 +88,135 @@
               />
             </div>
             <div class="accordian-body">
-              <h1>Testing</h1>
+              <h2>Command palette</h2>
+              <hr />
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                cupiditate ipsa tempore velit veritatis expedita corporis
-                laborum molestias. Provident voluptate quasi, voluptates iure
-                eos, aut in dolores nemo ut possimus ipsam soluta nostrum
-                deleniti commodi eligendi similique. Molestias, impedit ab
-                nostrum asperiores maxime qui ad modi tenetur explicabo? Magni
-                ut iure corporis provident nesciunt eaque vero officia nulla non
-                tempora, quae neque, perferendis nam optio deleniti? Pariatur
-                cupiditate adipisci ab corrupti quod perspiciatis sed quia ea
-                recusandae iste minima tenetur vel architecto et cum, debitis
-                temporibus hic nulla nisi? Error sed pariatur nam aliquam
-                dolores nostrum dignissimos quibusdam aliquid ullam.
+                In this section we'll talk about <i>command palette</i>. What is
+                it and how to use it.
+              </p>
+              <br />
+              <h3>What is command palette?</h3>
+              <p>
+                Command palette is easy way to select columns in a spreadsheet
+                and apply arthmatic operations on them.
+              </p>
+              <br />
+              <h3>How to use command palette?</h3>
+              <p>
+                Well to use command palette you just need to type commnd that
+                you need to execute <i>for example:</i> Lets say you need to add
+                <span class="command_palette_example">column A and B</span>
+                then you simply have to type
+                <span class="command_palette_example">A + B</span> and this
+                automatically generate a new column for you and if you want to
+                add
+                <span class="command_palette_example">column A and B</span> and
+                put it equal to another column
+                <span class="command_palette_example">C</span> then you just
+                simply have to type
+                <span class="command_palette_example">C = A + B</span> and this
+                will put <span class="command_palette_example">C</span> equal to
+                the sum of <span class="command_palette_example">A and B</span>
+              </p>
+              <br />
+              <strong>
+                <i>
+                  Note: Command palette dose not support brackets notation like
+                  in calculaters and You don't have to type capital letters all
+                  the time for example you can just say
+                  <span class="command_palette_example">a + b</span> and that
+                  will fine.
+                </i>
+              </strong>
+            </div>
+          </div>
+          <div class="accordian-item">
+            <div class="accordian-head">
+              <span class="accordian-title">Merge conflict</span>
+              <img
+                src="{{ url_for('static', filename='expand_more.svg') }}"
+                alt="expansion"
+                class="accordian-collapse"
+              />
+            </div>
+            <div class="accordian-body">
+              <h2>Merge conflict</h2>
+              <hr />
+              <p>
+                In this section we'll talk about merge conflict error. What is
+                it and How to avoid it.
+              </p>
+              <br />
+              <h3>What is merge conflict?</h3>
+              <p>
+                Merge conflict is an error which is happen when two merging cell
+                has conflicting difference <i>for example</i> let's say you have
+                add two column
+                <span class="command_palette_example">A and B</span> you enter
+                the command in the command palette and you hit execute then what
+                going to happen now that propoint will read all the cell in that
+                columns and attempt to add them if cell
+                <span class="command_palette_example">a1</span> and
+                <span class="command_palette_example">b1</span> have not same
+                values means a1 is equal to a word and b1 is equal to a number
+                that's where this error is occour
+              </p>
+              <br />
+              <h3>How to avoid this error?</h3>
+              <p>
+                First of all make the selected column don't have conflicting
+                changes but if it still happen then Propoint ask you to
+                <span class="command_palette_example">Overwrite</span> and
+                <span class="command_palette_example">Don't Overwrite</span>
+                So what are this:
+                <br />
+                <br />
+                <i>Overwrite -</i> In this case Propoint will overwrite the
+                target cell with a empty cell.
+                <br />
+                <i>Don't overwrite -</i> In this case Propoint don't overwrite
+                the target cell it will put it equal to its value.
+              </p>
+            </div>
+          </div>
+          <div class="accordian-item">
+            <div class="accordian-head">
+              <span class="accordian-title">Selection mode</span>
+              <img
+                src="{{ url_for('static', filename='expand_more.svg') }}"
+                alt="expansion"
+                class="accordian-collapse"
+              />
+            </div>
+            <div class="accordian-body">
+              <h2>Selection mode</h2>
+              <hr />
+              <p>
+                In this section we'll look at Section mode. What is it and how
+                to use it.
+              </p>
+              <br />
+              <h3>What is section mode?</h3>
+              <p>
+                Selection mode is simply a mode on which you can select columns
+                and perform operations on them.
+              </p>
+              <br />
+              <h3>How to use it?</h3>
+              <p>
+                Using selection mode is pritty stright forward:
+                <br />
+                <br />
+                <i>1></i> You have to unable selection mode to do that click on
+                the tool icon at the left side of your screen then select the
+                kind of operation that you need to perform.
+                <br />
+                <br />
+                <i>2></i> Select the cell on which you need to perform that
+                operation and hit
+                <span class="command_palette_example">execute</span>.
+                <br />
+                <i>And then you are done</i> 😊
               </p>
             </div>
           </div>
