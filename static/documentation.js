@@ -19,11 +19,46 @@ class ProcessAccordian {
   expansion_process() {
     this.expand_icon.className = "accordian-expand";
     this.accordian_body.className = "accordian-body-show";
+    const total_height = this.accordian_body.clientHeight;
+    this.accordian_body.className = "accordian-body-sliding";
+    const accordian_body = this.accordian_body;
+    const interval_id = setInterval(sliding, 0.1);
+    let current_height = 0;
+    function sliding() {
+      if (current_height === total_height) {
+        accordian_body.className = "accordian-body-show";
+        clearInterval(interval_id);
+      } else {
+        current_height++;
+        accordian_body.style.overflow = "hidden";
+        accordian_body.style.height = current_height + "px";
+        current_height = current_height;
+      }
+    }
   }
 
   collapsing_process() {
     this.expand_icon.className = "accordian-collapse";
     this.accordian_body.className = "accordian-body";
+
+    const total_height = 0;
+    this.accordian_body.className = "accordian-body-sliding";
+    const accordian_body = this.accordian_body;
+    const interval_id = setInterval(sliding, 10);
+    let current_height = this.accordian_body.clientHeight;
+    function sliding() {
+      if (current_height === total_height) {
+        accordian_body.className = "accordian-body";
+        accordian_body.style.height = null;
+        accordian_body.style.overflow = null;
+        clearInterval(interval_id);
+      } else {
+        current_height--;
+        accordian_body.style.overflow = "hidden";
+        accordian_body.style.height = current_height + "px";
+        current_height = current_height;
+      }
+    }
   }
 }
 
