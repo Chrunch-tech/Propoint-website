@@ -19,7 +19,7 @@ class ProcessAccordian {
   expansion_process() {
     this.expand_icon.className = "accordian-expand";
     this.accordian_body.className = "accordian-body-show";
-    const total_height = this.accordian_body.clientHeight;
+    const total_height = this.accordian_body.clientHeight + 1;
     this.accordian_body.className = "accordian-body-sliding";
     const accordian_body = this.accordian_body;
     const interval_id = setInterval(sliding, 0.2);
@@ -29,7 +29,7 @@ class ProcessAccordian {
         accordian_body.className = "accordian-body-show";
         clearInterval(interval_id);
       } else {
-        current_height++;
+        current_height += 2;
         accordian_body.style.overflow = "hidden";
         accordian_body.style.height = current_height + "px";
         current_height = current_height;
@@ -47,13 +47,13 @@ class ProcessAccordian {
     const interval_id = setInterval(sliding, 0.2);
     let current_height = this.accordian_body.clientHeight;
     function sliding() {
-      if (current_height === total_height) {
+      if (current_height < total_height) {
         accordian_body.className = "accordian-body";
         accordian_body.style.height = null;
         accordian_body.style.overflow = null;
         clearInterval(interval_id);
       } else {
-        current_height--;
+        current_height -= 2;
         accordian_body.style.overflow = "hidden";
         accordian_body.style.height = current_height + "px";
         current_height = current_height;
