@@ -258,3 +258,19 @@ nav {
   font-size: 20px;
   font-weight: middle;
 }
+
+#on-mobile {
+  display: none;
+}
+
+@media (max-width: 1046px) {
+  nav,
+  main,
+  footer {
+    display: none;
+  }
+  #on-mobile {
+    display: block;
+    font-family: "Heebo" sans-serif;
+  }
+}

@@ -126,3 +126,114 @@ nav {
   margin-top: 10px;
   width: 950px;
 }
+
+.important {
+  background-color: lightgray;
+}
+
+@media (max-width: 1000px) {
+  * {
+    font-family: "Heebo", sans-serif;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  body {
+    width: auto;
+  }
+
+  .accordian-item {
+    border: 1px solid lightgrey;
+    padding: 10px 0px;
+    border-radius: 5px;
+    width: 500px;
+  }
+
+  .accordian-head {
+    display: grid;
+    grid-template-columns: 400px 25px;
+    padding-left: 40px;
+  }
+
+  .accordian-body {
+    display: none;
+    padding-left: 20px;
+    margin-top: 10px;
+    width: 475px;
+  }
+
+  .accordian-body-show {
+    padding-left: 20px;
+    height: 100%;
+    margin-top: 10px;
+    width: 475px;
+  }
+
+  .accordian-body-sliding {
+    height: 0px;
+    display: block;
+    overflow: hidden;
+    padding-left: 20px;
+    margin-top: 10px;
+    width: 475px;
+  }
+
+  @media (max-width: 500px) {
+    * {
+      font-family: "Heebo", sans-serif;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    body {
+      width: auto;
+    }
+
+    nav {
+      display: none;
+    }
+
+    .accordian-item {
+      border: 1px solid lightgrey;
+      padding: 10px 0px;
+      border-radius: 5px;
+      width: 250px;
+    }
+
+    .accordian-head {
+      display: grid;
+      grid-template-columns: 200px 12px;
+      padding-left: 20px;
+    }
+
+    .accordian-body {
+      display: none;
+      padding-left: 20px;
+      margin-top: 10px;
+      width: 237px;
+    }
+
+    .accordian-body-show {
+      padding-left: 20px;
+      height: 100%;
+      margin-top: 10px;
+      width: 237px;
+    }
+
+    .accordian-body-sliding {
+      height: 0px;
+      display: block;
+      overflow: hidden;
+      padding-left: 20px;
+      margin-top: 10px;
+      width: 237px;
+    }
+
+    .background > img {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      top: 20%;
+    }
+  }
+}
