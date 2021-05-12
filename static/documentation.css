@@ -210,14 +210,14 @@ nav {
       display: none;
       padding-left: 20px;
       margin-top: 10px;
-      width: 237px;
+      width: 220px;
     }
 
     .accordian-body-show {
       padding-left: 20px;
       height: 100%;
       margin-top: 10px;
-      width: 237px;
+      width: 220px;
     }
 
     .accordian-body-sliding {
@@ -226,7 +226,7 @@ nav {
       overflow: hidden;
       padding-left: 20px;
       margin-top: 10px;
-      width: 237px;
+      width: 220px;
     }
 
     .background > img {

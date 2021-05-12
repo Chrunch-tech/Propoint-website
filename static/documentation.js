@@ -1,6 +1,6 @@
 const accordian_items = document.getElementsByClassName("accordian-item");
 
-class ProcessAccordian {
+class AnimateAccordian {
   constructor(accordian_item) {
     const accordian_child_nodes = accordian_item.children;
     this.accordian_head = accordian_child_nodes[0];
@@ -8,24 +8,25 @@ class ProcessAccordian {
     this.expand_icon = this.accordian_head.children[1];
   }
 
-  process() {
+  animate() {
     if (this.expand_icon.className === "accordian-collapse") {
-      this.expansion_process();
+      this.expansion_animate();
     } else {
-      this.collapsing_process();
+      this.collapsing_animate();
     }
   }
 
-  expansion_process() {
+  expansion_animate() {
     this.expand_icon.className = "accordian-expand";
     this.accordian_body.className = "accordian-body-show";
-    const total_height = this.accordian_body.clientHeight + 1;
+    const total_height = this.accordian_body.clientHeight;
     this.accordian_body.className = "accordian-body-sliding";
     const accordian_body = this.accordian_body;
     const interval_id = setInterval(sliding, 0.2);
     let current_height = 0;
     function sliding() {
-      if (current_height === total_height) {
+      if (current_height > total_height) {
+        accordian_body.style.height = total_height + "px";
         accordian_body.className = "accordian-body-show";
         clearInterval(interval_id);
       } else {
@@ -37,7 +38,7 @@ class ProcessAccordian {
     }
   }
 
-  collapsing_process() {
+  collapsing_animate() {
     this.expand_icon.className = "accordian-collapse";
     this.accordian_body.className = "accordian-body";
 
@@ -65,7 +66,7 @@ class ProcessAccordian {
 for (const accordian_item of accordian_items) {
   const accordian_head = accordian_item.children[0];
   accordian_head.addEventListener("click", () => {
-    const processAccordian = new ProcessAccordian(accordian_item);
-    processAccordian.process();
+    const animateAccordian = new AnimateAccordian(accordian_item);
+    animateAccordian.animate();
   });
 }
